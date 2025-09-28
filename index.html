@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi Register</title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="buttons-box">
+        <header>
+            <nav>
+                <div class="buttons-style">
+                    <div class="button-1">
+                        <a href="#">Register</a>
+                    </div>
+
+                    <div class="button-2">
+                        <a href="#">Login</a>
+                    </div>
+
+                    <div class="button-3">
+                        <a href="#">Log Out</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+
+    <div class="register-container">
+        <div class="welcome-title">
+            <h1>Welcome to Tamagotchi</h1>
+        </div>
+        <div class="choose-pet-title">
+            <h2>Choose your pet</h2>
+        </div>
+
+        <div class="pet-type">
+
+            <div class="bear-type">
+                    <p class="Bear">Bear</p>
+                    <img src="img/ositoTristeParado.png" alt="Standin Sad Bear">   
+                    <input type="radio" name="radio-button" id="btnBear">
+            </div>
+
+
+            <div class="owl-type">  
+                    <p class="Owl">Owl</p>
+                    <img src="img/ositoFelizParado.png" alt="Standin Happy Owl">
+                    <input type="radio" name="radio-button" id="btnOwl">
+            </div>
+
+
+            <div class="elephant-type">
+                    <p class="Elephant">Elephant</p>
+                    <img src="img/ositoTristeSentado.png" alt="Standin Sad Elephant">
+                    <input type="radio" name="radio-button" id="btnElephant">
+            </div>
+
+
+        </div>
+
+        <div class="pet-name">
+            <label for="txtPetName">Name your pet:</label>
+            <input type="text" id="txtpetName" placeholder="Oliver">
+        </div>
+
+        <div class="user-data">
+            <div class="username">
+                <label for="txtUsername">Username:</label>
+                <input type="text" id="txtUsername" placeholder="Username1234">
+            </div>
+
+            <div class="password">
+                <label for="txtPassword">Password:</label>
+                <input type="password" id="txtPassword" placeholder="********">
+            </div>
+
+            <div class="theme-colors">
+                <div class="color-title">
+                    <label for="txtColors">Choose a theme color:</label>
+                </div>
+
+                <div class="pink-theme">
+
+                    <div class="pink-theme-img">
+                        <img src="" alt="Pink Color Canvas">
+                    </div>
+
+                    <div class="pink-button">
+                        <input type="radio" name="color-button" id="btnPink">
+                    </div>
+
+                </div>
+
+                <div class="blue-theme">
+
+                    <div class="blue-theme-img">
+                        <img src="" alt="Blue Color Canvas">
+                    </div>
+
+                    <div class="blue-button">
+                        <input type="radio" name="color-button" id="btnBlue">
+                    </div>
+
+                </div>
+
+                <div class="yellow-theme">
+
+                    <div class="yellow-theme-img">
+                        <img src="" alt="Yellow Color Canvas">
+                    </div>
+
+                    <div class="yellow-button">
+                        <input type="radio" name="color-button" id="btnYellow">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="Login-Container">
+        <div class="title-login">
+            <h1>Login</h1>
+        </div>
+        <div class="user-data">
+            <label for="txtUsernameLogin">Your Username:</label>
+            <input type="text" id="txtUsernameLogin" placeholder="Username1234">
+        </div>
+        <div class="password-data">
+            <label for="txtPassLogin">Your Password:</label>
+            <input type="password" id="txtPassLogin" placeholder="********">
+        </div>
+
+        <input type="button" value="Login" id="btnLogin">
+    </div>
+
+
+
+
+
+</body>
