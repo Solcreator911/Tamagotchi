@@ -1,0 +1,277 @@
+ * {
+   margin: 0;
+   /*Elimina el margen de el navegador*/
+   padding: 0;
+   /*Elimina el padding de el navegador*/
+   box-sizing: border-box;
+   /*Hace que el padding y el border se incluyan en el ancho y alto total de los elementos*/
+ }
+ 
+
+ body {
+   font-family: Arial, sans-serif;
+   /* ejemplo */
+   color: #333;
+   font-family: 'Press Start 2P', cursive;
+   height: 1900px;
+   position: relative;
+   background: transparent; /* o black si querés oscuro */
+   overflow-x: hidden;
+ }
+
+/* --- Fondo neón animado --- */
+body::before{
+  content: "";
+  position: fixed; /* se queda fijo aunque hagas scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    #8A00FF,
+    #0033FF,
+    #0066FF,
+    #00CCFF,
+    #66FFFF
+  );
+  background-size: 400% 400%;
+  animation: girar 10s linear infinite;
+  z-index: -1; /* queda atrás de todo */
+  filter: blur(20px); /* difumina para dar efecto neón */
+}
+
+/* --- Animación del fondo --- */
+@keyframes girar {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+ header {
+   height: 80px;
+   text-align: center;
+   margin-bottom: 30px;
+   font-size: 24px;
+   padding-top: 10px;
+   position: relative;
+  z-index: 1;
+  padding: 30px 60px;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  /* FONDO TRANSPARENTE */
+  background: transparent; /* totalmente transparente */
+  /* o semi-transparente para contraste */
+  /* background: rgba(0,0,0,0.2); */
+ }
+
+
+ a {
+   display: block;
+   width: 130px;
+   height: 60px;
+   font-size: 20px;
+   border: solid black 3px;
+   border-radius: 5px;
+   position: absolute;
+   top: 0;
+   /* Arriba del todo */
+   right: 80px;
+   /*Lo pega al borde derecho*/
+   text-decoration: none;
+   margin-top: 10px;
+   padding-top: 10px;
+
+ }
+
+ a:hover,
+ a:active {
+   cursor: pointer;
+   background-color: orange;
+   transform: scale(0.95);
+ }
+
+ .Sign-Up {
+   right: 200px;
+   margin-right: 20px;
+
+ }
+
+ #choose-pet {
+   text-align: center;
+   margin-bottom: 30px;
+   color: #E1C869;
+   font-size: 20px;
+ }
+
+
+ .botoncito img,
+ .botoncito2 img,
+ .botoncito3 img {
+   width: 180px;
+   height: 250px;
+
+ }
+
+ .tipo-animal {
+   display: flex;
+   /* Los alinea en fila*/
+   justify-content: space-around;
+   /* Separa los elementos dentro de la fila*/
+   margin-bottom: 50px;
+   border: solid black 5px;
+   padding-top: 90px;
+   /*Hace espacio dentro del div*/
+   padding-bottom: 400px;
+   position: relative;
+ }
+
+ .buho-nombre,
+ .gato-nombre,
+ .osito-nombre {
+   padding-top: 15px;
+   padding-bottom: 10px;
+   text-align: center;
+   border: solid black 5px;
+ }
+
+ .buho,
+ .gato,
+ .osito {
+   border: solid black 5px;
+   padding: 10px;
+ }
+
+ .botoncito:hover,
+ .botoncito2:hover,
+ .botoncito3:hover {
+   /*Pseudo-Clase: Cambia el color del elemento al posicionar al cursor sobre el, con efecto de manito al posicionarse encima.*/
+   background-color: darkorange;
+   cursor: pointer;
+ }
+
+ .botoncito:active,
+ .botoncito2:active,
+ .botoncito3:active {
+   /*Cambia el color al clickear el boton*/
+   transform: scale(0.95);
+   /*Para que sirve? */
+ }
+
+ .user-creation {
+   margin-left: 50px;
+   padding-top: 50px;
+   padding-bottom: 80px;
+   position: absolute;
+   /*Al usar  */
+   top: 440px;
+   right: 20px;
+   left: 300px;
+   width: 680px;
+   height: 350px;
+   padding-left: 20px;
+   box-sizing: border-box;
+ }
+
+ .username,
+ .pet-name,
+ .password {
+   font-size: 20px;
+ }
+
+ .input {
+   margin-bottom: 10px;
+   margin-top: 10px;
+   width: 400px;
+   height: 30px;
+
+ }
+
+ .create-button {
+   width: 150px;
+   height: 50px;
+   margin-top: 20px;
+   display: inline-block;
+   margin-left: 450px;
+   font-size: 15px;
+   font-family: 'Press Start 2P', cursive;
+ }
+
+ .create-button:hover,
+ .play-button:hover {
+   background-color: lightgreen;
+   cursor: pointer;
+ }
+
+ .play-button {
+   display: inline-block;
+   width: 150px;
+   height: 50px;
+   font-size: 15px;
+   font-family: 'Press Start 2P', cursive;
+   margin-left: 450px;
+   margin-top: 150px;
+ }
+
+ .play-button:active,
+ .create-button:active {
+   background-color: lightblue;
+   cursor: pointer;
+ }
+
+ .login {
+   display: inline-block;
+   margin-left: 370px;
+   margin-top: 200px;
+   width: 700px;
+   height: 400px;
+   padding-left: 10px;
+   position: relative;
+ }
+
+ .login, .tipo-animal { /*Animacion border mismo*/
+  border: 15px solid transparent;
+  border-image: linear-gradient(45deg, #00CCFF, #66FFFF) 1;
+  animation: borderMove 3s linear infinite;
+  border-radius: 20px;
+}
+
+/* Animación del gradiente */
+@keyframes borderMove {
+  0% {
+    border-image-source: linear-gradient(45deg, #0066FF , #00CCFF, #66FFFF);
+  }
+  50% {
+    border-image-source: linear-gradient(225deg, #0066FF ,#00CCFF, #66FFFF);
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, #0066FF ,#00CCFF, #66FFFF);
+  }
+}
+
+ .login-Title {
+   font-size: 24px;
+   display: inline-block;
+   height: 50px;
+   width: 250px;
+   padding-bottom: 160px;
+   margin-left: 200px;
+   padding-top: 60px;
+
+ }
+
+ .username {
+   padding-bottom: 25px;
+ }
+
+ .title-register {
+   font-size: 15px;
+   padding-bottom: 25px;
+   display: inline-block;
+   margin-left: 65px;
+   margin-top: -20px;
+ }
+
+ 
